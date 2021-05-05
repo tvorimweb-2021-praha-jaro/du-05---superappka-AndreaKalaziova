@@ -31,3 +31,65 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+.obal {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*.menu {
+    
+}*/
+
+li {
+    display: inline-block;
+
+}
+
+.main_field {
+    background-image: url(images/pozadi.jpg);
+    color: #fbfbfd;
+    padding-left: 0.3rem;
+}
+h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    margin: 1rem;
+}
+.main_field p {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.button {
+    border: solid 2px #fbfbfd;
+    border-radius: 10px;
+    padding: 0.1rem 1rem;
+    text-align: center;
+    width:fit-content;
+}
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0.5rem;
+}
+/*.telefon {
+}*/
+
+h3 {
+    color: #48418e;
+}
+
+.kolonka {
+    text-align: center;
+}
+
+.kolonka img {
+    width: 4rem;
+}
+footer {
+    background-color: #48418e;
+    color: #fbfbfd;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.7rem;
+    padding: 0.1rem;
+}
