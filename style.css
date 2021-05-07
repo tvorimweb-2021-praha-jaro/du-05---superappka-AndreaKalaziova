@@ -31,7 +31,12 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
-/*var color*/
+/* animace na kolecka */
+
+:root {
+    --svFial: #48418e;
+    --seda: #e5e5e5;
+}
 
 .obal {
     font-family: 'Roboto', sans-serif;
@@ -58,15 +63,19 @@ li {
 }
 
 li:hover {
-    background-color: #48418e;
-    color: #fbfbfd;;
+    background-color: var(--svFial);
+    color: var(--seda);
 }
 
 .main_field {
     display: flex;
     flex-direction: column;
-    background-image: url(images/pozadi.jpg);
-    color: #fbfbfd;
+    background-image: 
+        linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)), /*dark pix filter*/
+        url(images/pozadi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--seda);
     padding: 1.5rem;
 }
 
@@ -84,21 +93,21 @@ h1 {
 
 .zdarma,
 .info {
-    border: solid 1.5px #fbfbfd;
+    border: solid 1.5px var(--seda);
     border-radius: 10px;
     padding: 0.5rem 1rem;
     text-align: center;
     margin: 1rem 0;
 }
 .zdarma {
-    background-color: #48418e;
+    background-color: var(--svFial);
 }
 .zdarma:hover {
     background-color: transparent;
 }
 
 .info:hover{
-    background-color: #48418e;
+    background-color: var(--svFial);
 }
 
 h2 {
@@ -112,13 +121,14 @@ h2 {
 }
 
 h3 {
-    color: #48418e;
+    color: var(--svFial);
     margin: 0.5rem;
 }
 
 .kolonky {
     padding: 1.5rem;
 }
+
 .kolonka {
     text-align: center;
     font-size: 1rem
@@ -134,8 +144,8 @@ h3 {
 }
 
 .footer {
-    background-color: #48418e;
-    color: #fbfbfd;
+    background-color: var(--svFial);
+    color: var(--seda);
     text-align: center;
     font-weight: 300;
     font-size: 0.7rem;
