@@ -31,65 +31,164 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+/*var color*/
+
 .obal {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: auto;
 }
 
-/*.menu {
-    
-}*/
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 li {
-    display: inline-block;
+    width: calc(50%);
+    color: #25133d;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem;
+}
 
+li:hover {
+    background-color: #48418e;
+    color: #fbfbfd;;
 }
 
 .main_field {
+    display: flex;
+    flex-direction: column;
     background-image: url(images/pozadi.jpg);
     color: #fbfbfd;
-    padding-left: 0.3rem;
-}
-h1 {
-    font-size: 6rem;
-    font-weight: 400;
-    margin: 1rem;
-}
-.main_field p {
-    font-size: 2.5rem;
-    font-weight: 300;
+    padding: 1.5rem;
 }
 
-.button {
-    border: solid 2px #fbfbfd;
-    border-radius: 10px;
-    padding: 0.1rem 1rem;
-    text-align: center;
-    width:fit-content;
+h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
 }
+
+.main_field p {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 1.5rem 0 0;
+}
+
+.zdarma,
+.info {
+    border: solid 1.5px #fbfbfd;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.zdarma {
+    background-color: #48418e;
+}
+.zdarma:hover {
+    background-color: transparent;
+}
+
+.info:hover{
+    background-color: #48418e;
+}
+
 h2 {
     font-size: 1.2rem;
     font-weight: 400;
     margin: 0.5rem;
 }
-/*.telefon {
-}*/
+
+.telefon {
+    display: none;
+}
 
 h3 {
     color: #48418e;
+    margin: 0.5rem;
 }
 
+.kolonky {
+    padding: 1.5rem;
+}
 .kolonka {
     text-align: center;
+    font-size: 1rem
+}
+
+.kolonka p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 .kolonka img {
     width: 4rem;
 }
-footer {
+
+.footer {
     background-color: #48418e;
     color: #fbfbfd;
     text-align: center;
     font-weight: 300;
     font-size: 0.7rem;
     padding: 0.1rem;
+}
+
+@media screen and (min-width: 480px) {
+    .menu {
+        flex-wrap: nowrap;
+        justify-content: left;
+    }
+    li {
+        text-align: left;
+        width: auto;
+        padding-right: 1rem;
+    }
+    .buttons {
+        display: flex;
+    }
+    .zdarma {
+        margin-right: 1.5rem;
+    }
+    .kolonky {
+        display: flex;
+    }
+    .kolonka {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .kolonka img {
+        order: -1;
+    }
+}
+
+@media screen and  (min-width: 860px) {
+    .obal {
+        max-width: 960px;
+    }
+    .main_field {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 0;
+        padding-bottom: 0;
+        max-height: 320px;
+    }
+    .main_text {
+        flex-wrap: wrap;
+    }
+    .telefon {
+        display:flex;
+        justify-content: flex-end;
+    }
+
 }
