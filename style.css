@@ -110,10 +110,12 @@ h1 {
     background-color: var(--svFial);
 }
 
-h2 {
+a {
     font-size: 1.2rem;
     font-weight: 400;
     margin: 0.5rem;
+    color: var(--seda);
+    text-decoration: none;
 }
 
 .telefon {
@@ -139,10 +141,6 @@ h3 {
     margin-bottom: 1.5rem;
 }
 
-.kolonka img {
-    width: 4rem;
-}
-
 .footer {
     background-color: var(--svFial);
     color: var(--seda);
@@ -152,7 +150,7 @@ h3 {
     padding: 0.1rem;
 }
 
-.kolonka img:hover {    
+.kolonka:hover img {    
   animation-name: flip;
   animation-duration: 1.5s;
   animation-iteration-count: 2;
@@ -167,7 +165,7 @@ h3 {
 	to {transform: scale(-1,1)};
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 750px) {
     .menu {
         flex-wrap: nowrap;
         justify-content: left;
